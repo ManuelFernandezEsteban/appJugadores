@@ -7,11 +7,11 @@ import { DataSource, SelectionModel } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
-  selector: 'app-tabla-jugadores',
-  templateUrl: './tabla-jugadores.component.html',
-  styleUrls: ['./tabla-jugadores.component.css']
+  selector: 'app-players-table',
+  templateUrl: './players-table.component.html',
+  styleUrls: ['./players-table.component.css']
 })
-export class TablaJugadoresComponent implements OnInit {
+export class PlayersTableComponent implements OnInit {
 
   public jugadores: Player[] = [];
   displayedColumns: string[] = ['select','id', 'position', 'nation'];

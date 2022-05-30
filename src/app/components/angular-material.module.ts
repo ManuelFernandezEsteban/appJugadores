@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { MatSliderModule } from '@angular/material/slider'; 
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import { TablaJugadoresComponent } from './tabla-jugadores/tabla-jugadores.component';
+import { PlayersTableComponent } from './players-table/players-table.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
-    TablaJugadoresComponent
+    PlayersTableComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +22,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatTableModule,
     MatPaginatorModule,
     MatCheckboxModule,
-    TablaJugadoresComponent
+    PlayersTableComponent
   ]
 })
 export class AngularMaterialModule { }
