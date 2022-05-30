@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { JugadoresServicesService } from '../../services/jugadores-services.service';
+import { PlayersService } from '../../services/players.service';
 import { Player } from '../../interfaces/player.interface';
 import { MatTableDataSource } from "@angular/material/table";
 
@@ -20,7 +20,7 @@ export class TablaJugadoresComponent implements OnInit {
 
   seleccion=new SelectionModel<Player>(true,[]);
 
-  constructor(public jugadoresService:JugadoresServicesService) { }
+  constructor(public jugadoresService:PlayersService) { }
 
   ngOnInit(): void {
      this.jugadoresService.getData().subscribe((data)=>{

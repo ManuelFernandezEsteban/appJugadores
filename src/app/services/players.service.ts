@@ -8,7 +8,7 @@ import { transformPlayersData } from '../utilities/transform-players-data';
 @Injectable({
   providedIn: 'root'
 })
-export class JugadoresServicesService {
+export class PlayersService {
   public jugadores : Player[] =[];
   
   constructor(private http:HttpClient) { }
