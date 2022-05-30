@@ -1,4 +1,4 @@
-export interface Jugador {
+export interface Player {
     id:                           number;
     red_card_continent:           number;
     age:                          number;

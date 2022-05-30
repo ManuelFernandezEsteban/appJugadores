@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { JugadoresServicesService } from '../../services/jugadores-services.service';
-import { Jugador } from '../../interfaces/jugador.interface';
+import { Player } from '../../interfaces/player.interface';
 import { MatTableDataSource } from "@angular/material/table";
 
 import { DataSource, SelectionModel } from '@angular/cdk/collections';
@@ -13,12 +13,12 @@ import { MatPaginator } from '@angular/material/paginator';
 })
 export class TablaJugadoresComponent implements OnInit {
 
-  public jugadores:Jugador[]=[];
+  public jugadores: Player[] = [];
   displayedColumns: string[] = ['select','id', 'position', 'nation'];
   datasource:any;
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
 
-  seleccion=new SelectionModel<Jugador>(true,[]);
+  seleccion=new SelectionModel<Player>(true,[]);
 
 
 
@@ -31,12 +31,12 @@ export class TablaJugadoresComponent implements OnInit {
   ngOnInit(): void {
      this.jugadoresService.getData().subscribe((data)=>{
       this.jugadores=data;
-      this.datasource=new MatTableDataSource<Jugador>(this.jugadores);
+      this.datasource=new MatTableDataSource<Player>(this.jugadores);
       this.datasource.paginator=this.paginator;
     });    
   }
 
-  onJugadorToggled(jugador:Jugador){
+  onJugadorToggled(jugador: Player){
     this.seleccion.toggle(jugador);
     console.log(jugador);
     console.log(this.seleccion.selected);
