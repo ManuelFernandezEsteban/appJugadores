@@ -23,7 +23,7 @@ export class PlayersTableComponent implements OnInit {
   constructor(public jugadoresService:PlayersService) { }
 
   ngOnInit(): void {
-     this.jugadoresService.getData().subscribe((data)=>{
+    this.jugadoresService.players.subscribe((data)=>{
       this.jugadores=data;
       this.datasource=new MatTableDataSource<Player>(this.jugadores);
       this.datasource.paginator=this.paginator;
