@@ -20,13 +20,7 @@ export class TablaJugadoresComponent implements OnInit {
 
   seleccion=new SelectionModel<Player>(true,[]);
 
-
-
-  constructor(public jugadoresService:JugadoresServicesService) { 
-
-   
-    
-  }
+  constructor(public jugadoresService:JugadoresServicesService) { }
 
   ngOnInit(): void {
      this.jugadoresService.getData().subscribe((data)=>{
@@ -41,5 +35,4 @@ export class TablaJugadoresComponent implements OnInit {
     console.log(jugador);
     console.log(this.seleccion.selected);
   }
-
 }
