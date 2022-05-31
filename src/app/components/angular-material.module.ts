@@ -8,10 +8,12 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
 import { SelectorColumnsComponent } from './selector-columns/selector-columns.component';
 import { FormsModule } from '@angular/forms';
-import { columnTransform } from '../pipes/columnTransForm.pipe';
+import { columnTransform } from '../pipes/columnTransform.pipe';
 
 
 import { MatInputModule } from '@angular/material/input';
+import { RatingValueModule } from './rating-value/rating-value.module';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { MatInputModule } from '@angular/material/input';
     MatPaginatorModule,
     MatCheckboxModule,
     MatSelectModule,
+    MatSortModule,
     MatInputModule,
+    RatingValueModule,
     FormsModule
   ],
   exports:[

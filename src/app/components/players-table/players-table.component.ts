@@ -18,8 +18,8 @@ export class PlayersTableComponent implements OnInit {
   
 
   public jugadores: Player[] = [];
-  displayedColumns: string[] = ['select','id', 'position', 'nation', 'price', 'age', 'team', 'league'];
-  displayedColumns2: string[] = ['id', 'position', 'nation', 'price', 'age', 'team', 'league'];
+  displayedColumns: string[] = ['select','id', 'position', 'nation', 'price', 'rating', 'ratingPrice', 'age', 'team', 'league'];
+  displayedColumns2: string[] = ['id', 'position', 'nation', 'price', 'rating', 'ratingPrice', 'age', 'team', 'league'];
   datasource:any;
 
   selected: string = '';
