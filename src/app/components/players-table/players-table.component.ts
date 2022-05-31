@@ -21,7 +21,12 @@ export class PlayersTableComponent implements OnInit {
   selected: string = '';
 
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
-  public positions = ['Goalkeeper', 'Defender', 'Midfielder', 'Forward'];
+
+
+  public positions = ['Goalkeeper', 'LeftWinger', 'RightWinger', 'AttackingMidfield', 'SecondStriker', 'Forward', 'LeftMidfield', 'CentralMidfield', 'Midfielder', 'RightMidfield', 'Defender', 'DefensiveMidfield']
+
+  public nationSelected: string = '';
+
 
   seleccion=new SelectionModel<Player>(true,[]);
 
@@ -32,6 +37,7 @@ export class PlayersTableComponent implements OnInit {
       this.jugadores=data;
       this.datasource=new MatTableDataSource<Player>(this.jugadores);
       this.datasource.paginator=this.paginator;
+      console.log(this.jugadores);
     });
   }
 
@@ -40,4 +46,15 @@ export class PlayersTableComponent implements OnInit {
     console.log(jugador);
     console.log(this.seleccion.selected);
   }
+
+  onChange(value:string) {
+    console.log(value);
+    this.selected = value;
+    this.datasource=new MatTableDataSource<Player>(this.jugadores.filter(jugador => jugador.position===value))
+  }
+
+/*   onChangeNation(value:string){
+    this.nationSelected = value;
+    this.datasource=new MatTableDataSource<Player>(this.jugadores.filter(jugador => jugador.nation===value))
+   } */
 }

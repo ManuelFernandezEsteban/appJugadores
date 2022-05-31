@@ -9,6 +9,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { HeaderModule } from './header/header.module';
 import { SelectorColumnsComponent } from './selector-columns/selector-columns.component';
 import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     MatPaginatorModule,
     MatCheckboxModule,
     MatSelectModule,
+    MatInputModule,
     HeaderModule,
     FormsModule
   ],
