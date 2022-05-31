@@ -1,0 +1,17 @@
+mat-icon {
+  font-size: inherit;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  max-width: 300px;
+}
+td {
+  width: 33% ;
+}
+
+th {
+  text-align: left;
+  font-weight: 500;
+}

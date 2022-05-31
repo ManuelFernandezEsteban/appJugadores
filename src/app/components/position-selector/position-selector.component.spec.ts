@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddToListComponent } from './add-to-list.component';
+import { PositionSelectorComponent } from './position-selector.component';
 
-describe('AddToListComponent', () => {
-  let component: AddToListComponent;
-  let fixture: ComponentFixture<AddToListComponent>;
+describe('PositionSelectorComponent', () => {
+  let component: PositionSelectorComponent;
+  let fixture: ComponentFixture<PositionSelectorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddToListComponent ]
+      declarations: [ PositionSelectorComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddToListComponent);
+    fixture = TestBed.createComponent(PositionSelectorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

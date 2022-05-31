@@ -1,3 +1,5 @@
+import { Position } from "./position.type";
+
 export interface PlayerApi {
   id: number;
   red_card_continent: number;
@@ -7,7 +9,7 @@ export interface PlayerApi {
   team: string;
   goals_selection: number;
   selections_nation: number;
-  position: string;
+  position: Position;
   price: number;
   goal_champ: number;
   assist_champ: number;
