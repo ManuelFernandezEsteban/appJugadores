@@ -10,7 +10,7 @@ import { RatingsBarModule } from './components/ratings-bar/ratings-bar.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
