@@ -7,7 +7,7 @@ import { Component, OnInit, Output } from '@angular/core';
 })
 export class SelectorColumnsComponent implements OnInit {
 
-  @Output()
+
   columna:string='';
 
   list:any[]=['GoalsSelection','SelectionNation','GoalChamp','League','YellowCard','SecondYellowCard','RedCard'];
@@ -18,7 +18,7 @@ export class SelectorColumnsComponent implements OnInit {
   }
 
   selection(event: any){
-    
+
   }
 
 }

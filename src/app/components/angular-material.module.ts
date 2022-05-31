@@ -6,10 +6,12 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { PlayersTableComponent } from './players-table/players-table.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { HeaderModule } from './header/header.module';
+import { SelectorColumnsComponent } from './selector-columns/selector-columns.component';
 
 @NgModule({
   declarations: [
-    PlayersTableComponent
+    PlayersTableComponent,
+    SelectorColumnsComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,8 @@ import { HeaderModule } from './header/header.module';
     MatTableModule,
     MatPaginatorModule,
     MatCheckboxModule,
-    PlayersTableComponent
+    PlayersTableComponent,
+    SelectorColumnsComponent
   ]
 })
 export class AngularMaterialModule { }
