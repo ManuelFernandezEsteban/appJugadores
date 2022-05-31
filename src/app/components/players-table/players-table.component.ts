@@ -14,7 +14,8 @@ import { MatPaginator } from '@angular/material/paginator';
 export class PlayersTableComponent implements OnInit {
 
   public jugadores: Player[] = [];
-  displayedColumns: string[] = ['select','id', 'position', 'nation'];
+  displayedColumns: string[] = ['select','id', 'position', 'nation', 'price', 'age', 'team', 'league'];
+  displayedColumns2: string[] = ['id', 'position', 'nation', 'price', 'age', 'team', 'league'];
   datasource:any;
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
 
@@ -27,7 +28,7 @@ export class PlayersTableComponent implements OnInit {
       this.jugadores=data;
       this.datasource=new MatTableDataSource<Player>(this.jugadores);
       this.datasource.paginator=this.paginator;
-    });    
+    });
   }
 
   onJugadorToggled(jugador: Player){
