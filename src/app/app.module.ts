@@ -9,9 +9,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { RatingsBarModule } from './components/ratings-bar/ratings-bar.module';
 import { HeaderModule } from './components/header/header.module';
 
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+       
   ],
   imports: [
     BrowserModule,
