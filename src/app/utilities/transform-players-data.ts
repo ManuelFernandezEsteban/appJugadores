@@ -1,11 +1,11 @@
 import { PlayerApi } from "src/app/interfaces/player-api.type";
 import { Player } from "src/app/interfaces/player.interface";
+import { PositionSimplified } from "../interfaces/position-simplified.enum";
 
 export const transformPlayersData = (players: PlayerApi[]): Player[] => {
   return players.map(player => {
     const transformedPlayer: Player = {
       id: player.id,
-      redCardContinent: player.red_card_continent,
       age: player.age,
       nation: player.nation,
       league: player.league,
@@ -13,6 +13,9 @@ export const transformPlayersData = (players: PlayerApi[]): Player[] => {
       goalsSelection: player.goals_selection,
       selectionsNation: player.selections_nation,
       position: player.position,
+      positionSimplified: PositionSimplified[player.position],
+      rating: Math.floor(Math.random() * 1000) / 1000,
+      ratingPrice: Math.floor(Math.random() * 1000) / 1000,
       price: player.price,
       champ: {
         goal: player.goal_champ,
@@ -36,6 +39,7 @@ export const transformPlayersData = (players: PlayerApi[]): Player[] => {
         ownGoal: player.own_goal_continent,
         yellowCard: player.yellow_card_continent,
         secondYellowCard: player.second_yellow_card_continent,
+        redCard: player.red_card_continent,
       },
     }
 
