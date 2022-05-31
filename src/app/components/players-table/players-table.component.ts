@@ -29,6 +29,18 @@ export class PlayersTableComponent implements OnInit {
 
   ColumnsSelecteds(column:ColumnCheck){
     console.log(column);
+    if(column.check){
+      this.displayedColumns.push(column.column);
+
+      this.displayedColumns2.push(column.column);
+    }else{
+      let posicion = this.displayedColumns.indexOf(column.column);
+      this.displayedColumns.splice(posicion,1);
+      posicion = this.displayedColumns2.indexOf(column.column);
+      this.displayedColumns2.splice(posicion,1);      
+    }
+
+    
   }
 
   ngOnInit(): void {
@@ -44,4 +56,5 @@ export class PlayersTableComponent implements OnInit {
     console.log(jugador);
     console.log(this.seleccion.selected);
   }
+
 }

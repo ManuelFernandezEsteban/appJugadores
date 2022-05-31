@@ -8,11 +8,15 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { HeaderModule } from './header/header.module';
 import { SelectorColumnsComponent } from './selector-columns/selector-columns.component';
 import { FormsModule } from '@angular/forms';
+import { columnTransform } from '../pipes/columnTransForm.pipe';
+
+
 
 @NgModule({
   declarations: [
     PlayersTableComponent,
-    SelectorColumnsComponent
+    SelectorColumnsComponent,
+    columnTransform
   ],
   imports: [
     CommonModule,
