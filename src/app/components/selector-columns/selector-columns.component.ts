@@ -13,7 +13,7 @@ export class SelectorColumnsComponent implements OnInit {
   selected!: ColumnCheck;
   columna:string='';
 
-  list:any[]=['GoalsSelection','SelectionNation','GoalChamp','League','YellowCard','SecondYellowCard','RedCard'];
+  list:any[]=['id','GoalsSelection','SelectionNation','GoalChamp','League','YellowCard','SecondYellowCard','RedCard'];
 
   constructor() { }
 
@@ -29,7 +29,7 @@ export class SelectorColumnsComponent implements OnInit {
     };
     
 
-    console.log(this.selected);
+    //console.log(this.selected);
     this.OnSelection.emit(this.selected);
 
   }
