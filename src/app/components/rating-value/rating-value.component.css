@@ -1,0 +1,21 @@
+mat-icon {
+  font-size: inherit;
+  height: unset;
+  width: unset;
+}
+
+.veryBad {
+  color:rgb(230, 0, 0)
+}
+
+.bad {
+  color:rgb(229, 92, 12)
+}
+
+.good {
+  color:rgb(184, 255, 129)
+}
+
+.veryGood {
+  color:rgb(128, 235, 46)
+}

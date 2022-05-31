@@ -7,7 +7,7 @@ import { PlayersService } from 'src/app/services/players.service';
   templateUrl: './ratings-bar.component.html',
   styleUrls: ['./ratings-bar.component.css']
 })
-export class RatingsBarComponent implements OnInit {
+export class RatingsBarComponent {
   public players!: Player[];
   public get youngPlayers() {
     return this.players.filter(player => player.age <= 21);
@@ -15,9 +15,7 @@ export class RatingsBarComponent implements OnInit {
   
   constructor(
     private playersService: PlayersService
-  ) { }
-
-  ngOnInit(): void {
+  ) {
     this.playersService.getPlayers().subscribe(players => {
       this.players = players;
     });

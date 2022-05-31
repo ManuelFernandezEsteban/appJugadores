@@ -1,5 +1,17 @@
 <mat-card>
   <h3>{{ title }}</h3>
-  <app-position-selector (selectedPosition)="selectedPosition">
+  <app-position-selector (selectedPosition)="selectPosition($event)">
   </app-position-selector>
+  <table>
+    <tr>
+      <th>Player</th>
+      <th>Rating</th>
+      <th>Price Rating</th>
+    </tr>
+    <tr *ngFor="let player of displayed">
+      <td>{{ player.id }}</td>
+      <td><app-rating-value [value]="player.rating" icon="hotel_class"></app-rating-value></td>
+      <td><app-rating-value [value]="player.ratingPrice" icon="price_check"></app-rating-value></td>
+    </tr>
+  </table>
 </mat-card>

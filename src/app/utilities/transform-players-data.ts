@@ -14,8 +14,8 @@ export const transformPlayersData = (players: PlayerApi[]): Player[] => {
       selectionsNation: player.selections_nation,
       position: player.position,
       positionSimplified: PositionSimplified[player.position],
-      rating: Math.random(),
-      ratingPrice: Math.random(),
+      rating: Math.floor(Math.random() * 1000) / 1000,
+      ratingPrice: Math.floor(Math.random() * 1000) / 1000,
       price: player.price,
       champ: {
         goal: player.goal_champ,

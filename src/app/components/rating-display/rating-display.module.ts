@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RatingDisplayComponent } from './rating-display.component';
 import { MatCardModule } from '@angular/material/card';
 import { PositionSelectorModule } from '../position-selector/position-selector.module';
+import { RatingValueModule } from '../rating-value/rating-value.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { PositionSelectorModule } from '../position-selector/position-selector.m
   imports: [
     CommonModule,
     MatCardModule,
-    PositionSelectorModule
+    PositionSelectorModule,
+    RatingValueModule
   ],
   exports: [
     RatingDisplayComponent
