@@ -1,5 +1,5 @@
 <app-header></app-header>
-<app-selector-columns></app-selector-columns>
+<app-selector-columns (OnSelection)="ColumnsSelecteds($event)"></app-selector-columns>
 <table mat-table
     [dataSource]="datasource"
     class="mat-elevation-z8">

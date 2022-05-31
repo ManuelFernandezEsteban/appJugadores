@@ -7,6 +7,7 @@ import { PlayersTableComponent } from './players-table/players-table.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { HeaderModule } from './header/header.module';
 import { SelectorColumnsComponent } from './selector-columns/selector-columns.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SelectorColumnsComponent } from './selector-columns/selector-columns.co
     MatTableModule,
     MatPaginatorModule,
     MatCheckboxModule,
-    HeaderModule
+    HeaderModule,
+    FormsModule
   ],
   exports:[
     MatSliderModule,

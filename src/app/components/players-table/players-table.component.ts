@@ -1,10 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { PlayersService } from '../../services/players.service';
 import { Player } from '../../interfaces/player.interface';
 import { MatTableDataSource } from "@angular/material/table";
 
 import { DataSource, SelectionModel } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
+import { ColumnCheck } from 'src/app/interfaces/columnCheck.interface';
 
 @Component({
   selector: 'app-players-table',
@@ -12,6 +13,9 @@ import { MatPaginator } from '@angular/material/paginator';
   styleUrls: ['./players-table.component.css']
 })
 export class PlayersTableComponent implements OnInit {
+
+ // @Input()column!:ColumnCheck;
+  
 
   public jugadores: Player[] = [];
   displayedColumns: string[] = ['select','id', 'position', 'nation'];
@@ -21,6 +25,10 @@ export class PlayersTableComponent implements OnInit {
   seleccion=new SelectionModel<Player>(true,[]);
 
   constructor(public jugadoresService:PlayersService) { }
+
+  ColumnsSelecteds(column:ColumnCheck){
+    console.log(column);
+  }
 
   ngOnInit(): void {
     this.jugadoresService.getPlayers().subscribe((data)=>{

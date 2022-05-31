@@ -1,4 +1,5 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ColumnCheck } from 'src/app/interfaces/columnCheck.interface';
 
 @Component({
   selector: 'app-selector-columns',
@@ -7,7 +8,9 @@ import { Component, OnInit, Output } from '@angular/core';
 })
 export class SelectorColumnsComponent implements OnInit {
 
+  @Output() OnSelection=new EventEmitter<ColumnCheck>()
 
+  selected!: ColumnCheck;
   columna:string='';
 
   list:any[]=['GoalsSelection','SelectionNation','GoalChamp','League','YellowCard','SecondYellowCard','RedCard'];
@@ -18,6 +21,16 @@ export class SelectorColumnsComponent implements OnInit {
   }
 
   selection(event: any){
+
+    
+    this.selected={
+      check:event.checked,
+      column:event.source.value
+    };
+    
+
+    console.log(this.selected);
+    this.OnSelection.emit(this.selected);
 
   }
 
