@@ -1,0 +1,14 @@
+<mat-toolbar class="menu" color="primary">
+  <h1>Football Players Stats</h1>
+  <span class="spacer"></span>
+<div class="menu-right">
+    <button  mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-icon><span class="material-icons">
+      account_circle
+      </span></mat-icon>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
