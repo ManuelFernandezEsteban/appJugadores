@@ -25,11 +25,6 @@ export class PlayersTableComponent implements OnInit {
   ngOnInit(): void {
     this.jugadoresService.getPlayers().subscribe((data)=>{
       this.jugadores=data;
-      const positions: string[] = [];
-      for (let player of data) {
-        if (!positions.includes(player.position)) positions.push(player.position);
-      }
-      console.log(positions);
       this.datasource=new MatTableDataSource<Player>(this.jugadores);
       this.datasource.paginator=this.paginator;
     });    

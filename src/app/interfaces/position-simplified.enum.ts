@@ -10,5 +10,5 @@ export enum PositionSimplified {
   Midfielder = "Midfielder",
   RightMidfield = "Midfielder",
   Defender = "Defender",
-  DefensiveMidfield = "Midfielder"
+  DefensiveMidfield = "Defender"
 };
