@@ -1,5 +1,6 @@
 import { PlayerApi } from "src/app/interfaces/player-api.type";
 import { Player } from "src/app/interfaces/player.interface";
+import { PositionSimplified } from "../interfaces/position-simplified.enum";
 
 export const transformPlayersData = (players: PlayerApi[]): Player[] => {
   return players.map(player => {
@@ -13,6 +14,7 @@ export const transformPlayersData = (players: PlayerApi[]): Player[] => {
       goalsSelection: player.goals_selection,
       selectionsNation: player.selections_nation,
       position: player.position,
+      positionSimplified: PositionSimplified[player.position],
       price: player.price,
       champ: {
         goal: player.goal_champ,
