@@ -5,7 +5,10 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { PlayersTableComponent } from './players-table/players-table.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatSelectModule } from '@angular/material/select';
 import { SelectorColumnsComponent } from './selector-columns/selector-columns.component';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { SelectorColumnsComponent } from './selector-columns/selector-columns.co
     MatTableModule,
     MatPaginatorModule,
     MatCheckboxModule,
+    MatSelectModule,
+    MatInputModule,
+    FormsModule
   ],
   exports:[
     MatSliderModule,
