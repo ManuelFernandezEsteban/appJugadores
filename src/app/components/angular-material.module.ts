@@ -5,12 +5,13 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { PlayersTableComponent } from './players-table/players-table.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { HeaderModule } from './header/header.module';
+import { MatSelectModule } from '@angular/material/select';
 import { SelectorColumnsComponent } from './selector-columns/selector-columns.component';
 import { FormsModule } from '@angular/forms';
 import { columnTransform } from '../pipes/columnTransForm.pipe';
 
 
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { columnTransform } from '../pipes/columnTransForm.pipe';
     MatTableModule,
     MatPaginatorModule,
     MatCheckboxModule,
-    HeaderModule,
+    MatSelectModule,
+    MatInputModule,
     FormsModule
   ],
   exports:[

@@ -1,0 +1,14 @@
+<mat-grid-list cols="3" rowHeight="400">
+  <mat-grid-tile>
+    <app-rating-display title="Top Rating" [players]="players">
+    </app-rating-display>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <app-rating-display title="Top Price" [players]="players" [priceRating]="true">
+    </app-rating-display>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <app-rating-display title="Young Promises" [players]="youngPlayers">
+    </app-rating-display>
+  </mat-grid-tile>
+</mat-grid-list>
