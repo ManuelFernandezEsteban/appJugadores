@@ -1,0 +1,7 @@
+<p>selector-columns works!</p>
+<div class="container">
+    <mat-checkbox *ngFor="let item of list" checked="false" value="item" (change)="selection($event)">
+        {{item}}
+    </mat-checkbox>
+
+</div>
