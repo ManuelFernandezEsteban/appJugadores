@@ -17,7 +17,11 @@ export class PlayersTableComponent implements OnInit {
   displayedColumns: string[] = ['select','id', 'position', 'nation', 'price', 'age', 'team', 'league'];
   displayedColumns2: string[] = ['id', 'position', 'nation', 'price', 'age', 'team', 'league'];
   datasource:any;
+
+  selected: string = '';
+
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
+  public positions = ['Goalkeeper', 'Defender', 'Midfielder', 'Forward'];
 
   seleccion=new SelectionModel<Player>(true,[]);
 

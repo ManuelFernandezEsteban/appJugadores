@@ -1,7 +1,16 @@
 <app-header></app-header>
 <app-selector-columns></app-selector-columns>
 
-
+<div class="bg-grey">
+  <mat-form-field appearance="outline">
+    <mat-label>Position</mat-label>
+    <mat-select [(ngModel)]="selected">
+      <mat-option *ngFor="let position of positions" [value]="position">
+        {{ position }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
 <table mat-table
     [dataSource]="datasource"
     class="mat-elevation-z8">
