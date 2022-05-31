@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './components/angular-material.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RatingsBarModule } from './components/ratings-bar/ratings-bar.module';
+import { HeaderModule } from './components/header/header.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { RatingsBarModule } from './components/ratings-bar/ratings-bar.module';
     AngularMaterialModule,
     MatToolbarModule,
     RatingsBarModule,
+    HeaderModule,
     HttpClientModule,
   ],
   providers: [],
